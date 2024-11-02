@@ -1,0 +1,10 @@
+#container{
+    display: flex;
+    border-style: solid;
+    flex-wrap: wrap;
+}
+
+.cell{
+    background-color: yellow;
+    flex: 25%;
+}
