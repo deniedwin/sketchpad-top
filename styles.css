@@ -11,3 +11,7 @@
     background-color: yellow;
     flex: 20%;
 }
+
+.cell.new{
+    background-color: blue;
+}
