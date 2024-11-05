@@ -17,7 +17,7 @@ btn.addEventListener("click", () => {
 
 // Function to draw the grid
 function drawGrid(width) {
-    const cellSize = DISPLAY_SIZE / width; // Calculate cell size in pixels for 400px container
+    const cellSize = DISPLAY_SIZE / width; // Calculate cell size in pixels for css height container
 
     for (let i = 1; i <= width * width; i++) {
         const cell = document.createElement("div");
@@ -28,6 +28,13 @@ function drawGrid(width) {
 
         cell.addEventListener("mouseenter", () => {
             cell.classList.add("new");
+            cell.style.backgroundColor = `rgb(${randomRgb()}, ${randomRgb()}, ${randomRgb()})`;
         });
     }
+}
+
+//function to generate random number between 0 and 255 for rgb color
+function randomRgb(){
+    let ranRgb = Math.floor(Math.random() * 255);
+    return ranRgb;
 }
